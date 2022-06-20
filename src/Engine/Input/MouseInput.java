@@ -25,7 +25,7 @@ import java.awt.event.MouseMotionListener;
  */
 public class MouseInput implements MouseListener, MouseMotionListener {
     public static int x, y;
-    private int     MouseButton = -1;
+    private int MouseButton = -1;
     private boolean MouseEnter;
 
     public MouseInput() {
