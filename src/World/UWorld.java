@@ -11,6 +11,7 @@ import java.util.List;
 public class UWorld implements IDynamicObject {
     protected final List<AActor> worldActors;
     protected final List<AActor> pendingAddActors;
+    private boolean bIsRunning;
 
     public UWorld(IWorldInitializer initializer) {
         worldActors = new ArrayList<>();
@@ -99,6 +100,6 @@ public class UWorld implements IDynamicObject {
      * Begin play for worlds
      */
     public void BeginPlay() {
-
+        bIsRunning = true;
     }
 }

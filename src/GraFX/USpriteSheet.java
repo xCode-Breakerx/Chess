@@ -10,8 +10,8 @@ import CoreUtils.UMasterFunctionLibrary;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 /**
@@ -108,7 +108,7 @@ public class USpriteSheet {
         BufferedImage sheet = null;
 
         try {
-            sheet = ImageIO.read(new FileInputStream(Path));
+            sheet = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream(Path)));
         } catch (Exception e) {
             System.out.printf("Error Loading SpriteSheet!\nTrace: %s\nInput Path: %s\n", e.getMessage(), Path);
             e.printStackTrace();
